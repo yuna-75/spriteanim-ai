@@ -986,8 +986,8 @@ const App: React.FC = () => {
                         </div>
 
                         <div className="grid grid-cols-2 gap-3">
-                            <NumberControl label="Rows" value={spriteConfig.rows} onChange={v => setSpriteConfig(p => ({...p, rows: v}))} min={1} max={64} slider={false} />
-                            <NumberControl label="Cols" value={spriteConfig.cols} onChange={v => setSpriteConfig(p => ({...p, cols: v}))} min={1} max={64} slider={false} />
+                            <NumberControl label="Rows" value={spriteConfig.rows} onChange={v => setSpriteConfig(p => ({...p, rows: v, totalFrames: v * p.cols}))} min={1} max={64} slider={false} />
+                            <NumberControl label="Cols" value={spriteConfig.cols} onChange={v => setSpriteConfig(p => ({...p, cols: v, totalFrames: p.rows * v}))} min={1} max={64} slider={false} />
                         </div>
                         
                         <NumberControl label="Total Frames" value={spriteConfig.totalFrames} onChange={v => setSpriteConfig(p => ({...p, totalFrames: v}))} min={1} max={spriteConfig.rows * spriteConfig.cols} slider={false} />
