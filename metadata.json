@@ -1,0 +1,5 @@
+{
+  "name": "SpriteAnim AI",
+  "description": "Transform static sprite sheets into smooth animations instantly. Use AI to auto-detect grid layouts and export high-quality GIFs.",
+  "requestFramePermissions": []
+}
